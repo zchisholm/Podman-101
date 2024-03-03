@@ -5,8 +5,30 @@ Repo for documentation of getting started with Podman
 # Getting Started with Podman
 
 ## Introduction
-- Brief overview of Podman and its unique features compared to traditional container tools.
-- Explanation of Podman's daemonless architecture and support for rootless containers.
+
+[Podman](https://podman.io/) (Pod Manager) is an open-source tool for developing, managing, and running OCI Containers on your Linux System. Containers can either be run as root or in rootless mode. Unlike traditional container engines, such as Docker, Podman operates without a daemon and provides a Docker-compatible command-line interface (CLI). This design enhances security, reduces complexity, and facilitates easier troubleshooting.
+
+### Unique Features Compared to Traditional Container Tools
+
+Podman distinguishes itself from other containerization tools with several key features:
+
+- **Daemonless Architecture**: Podman does not require a running daemon to manage containers. This design reduces potential attack vectors and simplifies the architecture, making Podman an ideal choice for developers and system administrators who prioritize security and minimal overhead.
+
+- **Rootless Containers**: Podman allows users to run containers without root privileges, significantly enhancing security by limiting the potential impact of container vulnerabilities. This feature is particularly beneficial in multi-user environments and for personal development, as it minimizes the risk of system-wide compromises.
+
+- **Compatibility with Docker**: Podman offers a CLI that is compatible with Docker, making it easy for users to transition without changing their workflows. Docker commands can often be replaced with Podman commands simply by substituting `docker` with `podman`.
+
+- **Pods Support**: Inspired by Kubernetes, Podman can manage groups of containers as a single pod, allowing for easier management of multi-container applications.
+
+- **OCI Compliant**: Podman is fully compliant with the Open Container Initiative (OCI) standards, ensuring compatibility with OCI containers and image specifications.
+
+### Daemonless Architecture and Support for Rootless Containers
+
+Podman’s daemonless architecture means that each command is executed in its own process, avoiding the need for a constantly running background service. This approach not only enhances security by reducing the attack surface but also allows for direct control over containers without intermediaries. Moreover, the support for rootless containers enables users to run containers with their user ID, avoiding the need for escalated privileges and further securing the containerized environment.
+
+Podman integrates seamlessly into the container ecosystem, offering features like image management, volume management, network management, and more, while adhering to a secure and user-friendly approach. Whether you are a developer, system administrator, or DevOps engineer, Podman provides a powerful, secure, and flexible tool for container management.
+
+
 
 ## Prerequisites
 - General prerequisites for installing Podman across all supported operating systems.
