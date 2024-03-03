@@ -28,7 +28,20 @@ Podman’s daemonless architecture means that each command is executed in its ow
 
 Podman integrates seamlessly into the container ecosystem, offering features like image management, volume management, network management, and more, while adhering to a secure and user-friendly approach. Whether you are a developer, system administrator, or DevOps engineer, Podman provides a powerful, secure, and flexible tool for container management.
 
+### Docker vs. Podman Feature Comparison
 
+For those who are familiar with Docker, here is a table comparing the features of Docker and Podman.
+
+| Feature                         | Docker | Podman |
+|---------------------------------|--------|--------|
+| Daemonless Architecture         | X      | ✓      |
+| Rootless Containers             | X      | ✓      |
+| Compatibility with Docker CLI   | ✓      | ✓      |
+| Pods Support                    | X      | ✓      |
+| OCI Compliant                   | ✓      | ✓      |
+
+- "✓" indicates that the feature is supported.
+- "X" indicates that the feature is not supported.
 
 ## Prerequisites
 - General prerequisites for installing Podman across all supported operating systems.
